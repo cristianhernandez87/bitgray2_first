@@ -1,0 +1,204 @@
+/*desarrollador por Cristia Hernandez 2015*/
+
+@import "compass/css3";
+@import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+@import "compass";
+@import "compass/css3/border-radius";
+@import "compass/utilities";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+@import "compass/css3/font-face";
+
+/*=======colors=======*/
+
+$bg-blue:				#0084ff;
+$bg-blue-dark:			#003366;
+$bg-gray:				#666666;
+
+/*=======colors-end=======*/
+
+
+
+// h1 {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   -webkit-transform: translate(-50%, -50%);
+//   transform: translate(-50%, -50%);
+//   margin: 0;
+//   font: 20vmin/1 HUGEAvantGardeBold;
+//   letter-spacing: -0.06em;
+//   text-align: center;
+// }
+
+
+
+
+/*=======fonts=======*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+/*=======fonts-end=======*/
+
+/*=======BorderRadius=======*/
+
+@mixin border-radius($radius) { 
+	 -webkit-border-radius: $radius;
+		-moz-border-radius: $radius; 
+			 border-radius: $radius;
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+    	    transform: $transforms;
+}
+
+/*=======BorderRadius-end=======*/
+
+/*=======Media=======*/
+
+/*=======Media-end=======*/
+
+/*=======Artefactos=======*/
+
+%bg-basic {
+	background: {
+		repeat: no-repeat;
+		position: center center;
+		color: transparent;
+		size: 100%;
+	}
+}
+%after-before-bas {
+	position: absolute;
+	content: " ";
+}
+%ab-100 {
+	@extend %after-before-bas;
+	width: 100%;
+}
+
+/*=======Artefactos-end=======*/
+
+
+/* -- header -- */
+
+
+
+body {
+	position: relative;
+	background: white;
+	color: #666;
+	margin: 0;
+	font: {
+		family: 'Roboto', sans-serif;
+		size: 15px;
+	};
+	* { @include box-sizing(border-box);}
+	p { font-family: 'Roboto', sans-serif;}
+}
+
+a, a:link {
+	text-decoration: none;
+	display: inline-block;		
+}
+
+
+.wrapp { 
+	font-size: 0;
+	padding: 1rem;
+	text-align: center;
+	max-width: 900px;
+	margin: auto;
+	position: relative;
+	@media (max-width: 768px) {
+		margin: 1rem 3rem;
+	}
+}
+
+.content_us {
+	font-size: 1rem;
+	display: inline-block;
+	width: 32%;
+	position: relative;
+	border: 1em solid $bg-blue;
+	margin: 0 0.65% 1em;
+	@media (max-width: 1024px) {
+		width: 49%;
+		margin: 0 0.5% 1em;
+	}
+	@media (max-width: 768px) {
+		width: 100%;
+		margin: 0 0 1em;
+	}
+	//&:nth-child(odd) { margin-right: 2%;}
+	.c_img {
+		margin-bottom: -5px;
+		img { width: 100%;}
+	}
+	.c_info {
+		background: white;
+		padding: 1em;
+		bottom: 10%;
+		right: 35%;
+		text-align: left;
+		p {
+			margin: 0 0 0.5em;
+			font-weight: 300;
+		}
+		.name {
+			font-size: 1.5em;
+			color: $bg-blue;
+		}
+	}
+}
+
+.tools {
+	font-size: 1rem;
+	a {
+		@include transition-duration(0.5s);
+		@include transform(transition);
+		@include hide-text(left);
+		position: absolute;
+		top: 50%;
+		width: 2em;
+		height: 2em;
+		border-bottom: 1px solid $bg-blue;
+		background: {
+			color: white;
+			position: center center;
+			repeat: no-repeat;
+			size: 50%;			
+		}
+		&:hover { 
+			background-color: $bg-blue-dark;
+			border-bottom: none;
+		}
+
+	}
+	.next {
+		left: 100%;
+		background-image: url(../img/arrowNext_.svg);
+		&:hover { background-image: url(../img/arrowNext.svg);}
+		@media (max-width: 920px) {
+			left: initial;
+			right: 1rem;
+		}
+		@media (max-width: 768px) { right: -1rem;}
+	}
+	.back {
+		right: 100%;
+		background-image: url(../img/arrowBack_.svg);
+		&:hover { background-image: url(../img/arrowBack.svg);}
+		@media (max-width: 920px) {
+			right: initial;
+			left: 1rem;
+		}
+		@media (max-width: 768px) { left: -1rem;}
+	}
+}

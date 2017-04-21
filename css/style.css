@@ -1,0 +1,183 @@
+/*desarrollador por Cristia Hernandez 2015*/
+/*=======colors=======*/
+/*=======colors-end=======*/
+/*=======fonts=======*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+/*=======fonts-end=======*/
+/*=======BorderRadius=======*/
+/*=======BorderRadius-end=======*/
+/*=======Media=======*/
+/*=======Media-end=======*/
+/*=======Artefactos=======*/
+/*=======Artefactos-end=======*/
+/* -- header -- */
+/* line 93, ../sass/style.scss */
+body {
+  position: relative;
+  background: white;
+  color: #666;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+/* line 102, ../sass/style.scss */
+body * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 103, ../sass/style.scss */
+body p {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 106, ../sass/style.scss */
+a, a:link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* line 112, ../sass/style.scss */
+.wrapp {
+  font-size: 0;
+  padding: 1rem;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+}
+@media (max-width: 768px) {
+  /* line 112, ../sass/style.scss */
+  .wrapp {
+    margin: 1rem 3rem;
+  }
+}
+
+/* line 124, ../sass/style.scss */
+.content_us {
+  font-size: 1rem;
+  display: inline-block;
+  width: 32%;
+  position: relative;
+  border: 1em solid #0084ff;
+  margin: 0 0.65% 1em;
+}
+@media (max-width: 1024px) {
+  /* line 124, ../sass/style.scss */
+  .content_us {
+    width: 49%;
+    margin: 0 0.5% 1em;
+  }
+}
+@media (max-width: 768px) {
+  /* line 124, ../sass/style.scss */
+  .content_us {
+    width: 100%;
+    margin: 0 0 1em;
+  }
+}
+/* line 140, ../sass/style.scss */
+.content_us .c_img {
+  margin-bottom: -5px;
+}
+/* line 142, ../sass/style.scss */
+.content_us .c_img img {
+  width: 100%;
+}
+/* line 144, ../sass/style.scss */
+.content_us .c_info {
+  background: white;
+  padding: 1em;
+  bottom: 10%;
+  right: 35%;
+  text-align: left;
+}
+/* line 150, ../sass/style.scss */
+.content_us .c_info p {
+  margin: 0 0 0.5em;
+  font-weight: 300;
+}
+/* line 154, ../sass/style.scss */
+.content_us .c_info .name {
+  font-size: 1.5em;
+  color: #0084ff;
+}
+
+/* line 161, ../sass/style.scss */
+.tools {
+  font-size: 1rem;
+}
+/* line 163, ../sass/style.scss */
+.tools a {
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transform: transition;
+  -o-transform: transition;
+  -ms-transform: transition;
+  -webkit-transform: transition;
+  transform: transition;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  text-transform: capitalize;
+  position: absolute;
+  top: 50%;
+  width: 2em;
+  height: 2em;
+  border-bottom: 1px solid #0084ff;
+  background-color: white;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+/* line 178, ../sass/style.scss */
+.tools a:hover {
+  background-color: #003366;
+  border-bottom: none;
+}
+/* line 184, ../sass/style.scss */
+.tools .next {
+  left: 100%;
+  background-image: url(../img/arrowNext_.svg);
+}
+/* line 187, ../sass/style.scss */
+.tools .next:hover {
+  background-image: url(../img/arrowNext.svg);
+}
+@media (max-width: 920px) {
+  /* line 184, ../sass/style.scss */
+  .tools .next {
+    left: initial;
+    right: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  /* line 184, ../sass/style.scss */
+  .tools .next {
+    right: -1rem;
+  }
+}
+/* line 194, ../sass/style.scss */
+.tools .back {
+  right: 100%;
+  background-image: url(../img/arrowBack_.svg);
+}
+/* line 197, ../sass/style.scss */
+.tools .back:hover {
+  background-image: url(../img/arrowBack.svg);
+}
+@media (max-width: 920px) {
+  /* line 194, ../sass/style.scss */
+  .tools .back {
+    right: initial;
+    left: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  /* line 194, ../sass/style.scss */
+  .tools .back {
+    left: -1rem;
+  }
+}
